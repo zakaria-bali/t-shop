@@ -1,4 +1,4 @@
-<div class="h-full w-full p-5" style="width: 400px !important">
+<div class="h-full w-full p-5 card" style="width: 400px !important">
   <div class="flex justify-content-center align-items-center p-8 img-container">
     <img src="assets/images/lounge-chair.png" alt="lounge-chair.png" class="product-image"/>
   </div>
@@ -10,5 +10,17 @@
     <p class="product-description text-sm">
       Comfortable seating for relaxation and lounging.
     </p>
+    <button class="flex justify-content-center align-items-center cart-action">
+      <span class="material-symbols-outlined mr-1">
+        add_shopping_cart
+      </span>
+      Add To Cart
+    </button>
+    <button class="flex justify-content-center align-items-center cart-action" *ngIf="false">
+      <span class="material-symbols-outlined">
+        remove_shopping_cart
+      </span>
+      Remove from Cart
+    </button>
   </div>
 </div>
