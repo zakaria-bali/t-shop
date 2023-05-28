@@ -9,6 +9,10 @@
   max-height: 300px;
 }
 
+.product-title {
+  color: rgba(0,0,0,.85);
+}
+
 .product-description {
   color: #797979;
 }
@@ -34,5 +38,8 @@
 .card:hover {
   .cart-action {
     visibility: visible;
+  }
+  .product-title {
+    text-decoration: solid underline rgba(0,0,0,.85) 2px;
   }
 }
