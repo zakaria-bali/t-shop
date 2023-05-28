@@ -1,0 +1,21 @@
+
+<nz-input-number-group [nzAddOnBefore]="plus" [nzAddOnAfter]="minus">
+  <nz-input-number [(ngModel)]="value" [nzStep]="1" [nzMin]="1" [disabled]="isDisabled" (ngModelChange)="updateValue()"></nz-input-number>
+</nz-input-number-group>
+
+<ng-template #plus>
+  <button class="flex justify-content-center align-items-center action plus" (click)="increment()">
+    <span class="material-symbols-outlined">
+      add
+    </span>
+  </button>
+</ng-template>
+
+<ng-template #minus>
+  <button class="flex justify-content-center align-items-center action minus" (click)="decrement()">
+    <span class="material-symbols-outlined">
+      remove
+    </span>
+  </button>
+</ng-template>
+

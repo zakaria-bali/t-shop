@@ -1,0 +1,54 @@
+<div nz-row [nzGutter]="16" >
+  <div
+      nz-col
+      class="gutter-row p-0"
+      nzXs="24"
+      nzSm="22"
+      nzMd="12"
+      nzLg="12"
+      nzXl="12"
+      class="p-5"
+    >
+    <div class="flex justify-content-center align-items-center p-8 img-container">
+      <img src="assets/images/lounge-chair.png" class="product-img m-6" alt="Lounge Chair" />
+    </div>
+  </div>
+
+  <div nz-col
+        class="gutter-row p-5"
+        nzXs="24"
+        nzSm="22"
+        nzMd="12"
+        nzLg="12"
+        nzXl="12">
+    <div class="flex justify-content-between">
+      <h1> Lounge Chair </h1>
+      <h1> {{ 89 | currency }} </h1>
+    </div>
+    <div class="font-medium product-category">
+      Furniture
+    </div>
+    <div class="product-description" [innerHTML]="productDescription">
+    </div>
+
+    <div class="actions flex flex-row justify-content-center align-items-center">
+      <div class="quantity mr-3">
+        <app-increment-decrement [(ngModel)]="quantity"></app-increment-decrement>
+      </div>
+      <button class="flex justify-content-center align-items-center cart-action flex-1">
+        <span class="material-symbols-outlined mr-1"> add_shopping_cart </span>
+        Add To Cart
+      </button>
+      <button
+        class="flex justify-content-center align-items-center cart-action"
+        *ngIf="false"
+      >
+        <span class="material-symbols-outlined"> remove_shopping_cart </span>
+        Remove from Cart
+      </button>
+
+    </div>
+  </div>
+
+
+</div>

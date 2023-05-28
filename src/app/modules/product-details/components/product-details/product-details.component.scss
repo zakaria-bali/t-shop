@@ -1,0 +1,36 @@
+.product-img {
+  max-height: 500px;
+  max-width: 500px;
+}
+
+.img-container {
+  background-color: #f2f2f4;
+  border-radius: 10px;
+}
+
+.product-category {
+  color: #747474;
+  margin-bottom: 14px;
+}
+
+.product-description {
+  font-weight: 500;
+  text-justify: inter-cluster;
+}
+
+.cart-action {
+  background-color: #000;
+  bottom: 10px;
+  border: none;
+  padding: 6px 20px;
+  border-radius: 10px;
+  min-width: 320px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cart-action:hover {
+  color: #000;
+  background-color: #f2f2f4;
+}

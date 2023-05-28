@@ -6,6 +6,7 @@ import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
 
 @NgModule({
   declarations: [],
@@ -17,6 +18,7 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
     NzGridModule,
     NzInputModule,
     NzIconModule,
+    NzInputNumberModule,
   ],
   exports: [
     NzLayoutModule,
@@ -25,6 +27,7 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
     NzGridModule,
     NzInputModule,
     NzIconModule,
+    NzInputNumberModule,
   ],
 })
 export class NgZorroModule {}

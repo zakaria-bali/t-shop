@@ -1,0 +1,49 @@
+.action {
+  background-color: #000;
+  bottom: 10px;
+  border: none;
+  padding: 6px 20px;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.action:hover {
+  color: #000;
+  background-color: #f2f2f4;
+}
+
+.plus {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.minus {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+:host::ng-deep{
+  .ant-input-number-group-addon {
+    padding: 0;
+    border: none;
+  }
+
+  .ant-input-number-input {
+    padding: 18px 0px;
+    width: 80px;
+    text-align: center
+  }
+
+  .ant-input-number-focused {
+    border: none;
+  }
+
+  .ant-input-number-handler {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+}
