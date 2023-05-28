@@ -4,9 +4,10 @@ import { Product } from 'src/app/core/models/product.model';
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.scss']
+  styleUrls: ['./product-list.component.scss'],
 })
 export class ProductListComponent {
+  searchKeyword: string = '';
 
   products: Product[] = [
     {
@@ -128,7 +129,5 @@ export class ProductListComponent {
 
       Using a Dish Drainer offers several advantages. Firstly, it allows freshly washed dishes to dry naturally, reducing the need for hand-drying and minimizing the risk of bacterial growth associated with damp kitchenware. By providing proper ventilation and airflow, the drainer helps to speed up the drying process, ensuring that dishes are ready for storage or immediate use.`,
     },
-
-  ]
-
+  ];
 }

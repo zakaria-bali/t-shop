@@ -1,32 +1,33 @@
-<div class="h-full w-full p-5 card" *ngIf="product else skeleton">
+<div class="h-full w-full p-5 card" *ngIf="product; else skeleton">
   <div class="flex justify-content-center align-items-center p-8 img-container">
-    <img [src]="product.imageUrl" alt="lounge-chair.png" class="product-image"/>
+    <img
+      [src]="product.imageUrl"
+      alt="lounge-chair.png"
+      class="product-image"
+    />
   </div>
   <div>
     <div class="flex justify-content-between font-bold text-base">
-      <div> {{ product.title }} </div>
-      <div> {{  product.price | currency }} </div>
+      <div>{{ product.title }}</div>
+      <div>{{ product.price | currency }}</div>
     </div>
     <p class="product-description text-sm">
       {{ product.shortDescription }}
     </p>
     <button class="flex justify-content-center align-items-center cart-action">
-      <span class="material-symbols-outlined mr-1">
-        add_shopping_cart
-      </span>
+      <span class="material-symbols-outlined mr-1"> add_shopping_cart </span>
       Add To Cart
     </button>
-    <button class="flex justify-content-center align-items-center cart-action" *ngIf="false">
-      <span class="material-symbols-outlined">
-        remove_shopping_cart
-      </span>
+    <button
+      class="flex justify-content-center align-items-center cart-action"
+      *ngIf="false"
+    >
+      <span class="material-symbols-outlined"> remove_shopping_cart </span>
       Remove from Cart
     </button>
   </div>
 </div>
 
 <ng-template #skeleton>
-  <div>
-    loading...
-  </div>
+  <div>loading...</div>
 </ng-template>

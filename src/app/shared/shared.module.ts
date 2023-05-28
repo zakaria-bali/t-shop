@@ -4,22 +4,9 @@ import { NgZorroModule } from './ng-zorro/ng-zorro.module';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 
-
-
 @NgModule({
-  declarations: [
-    ToolbarComponent,
-    FooterComponent
-  ],
-  imports: [
-    CommonModule,
-    NgZorroModule
-  ],
-  exports: [
-    CommonModule,
-    NgZorroModule,
-    ToolbarComponent,
-    FooterComponent
-  ]
+  declarations: [ToolbarComponent, FooterComponent],
+  imports: [CommonModule, NgZorroModule],
+  exports: [CommonModule, NgZorroModule, ToolbarComponent, FooterComponent],
 })
-export class SharedModule { }
+export class SharedModule {}

@@ -5,12 +5,12 @@ import { HomeShell } from './home.shell';
 const routes: Routes = [
   {
     path: '',
-    component: HomeShell
-  }
+    component: HomeShell,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class HomeRoutingModule { }
+export class HomeRoutingModule {}

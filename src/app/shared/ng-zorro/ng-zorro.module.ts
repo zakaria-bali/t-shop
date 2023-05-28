@@ -4,7 +4,8 @@ import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzGridModule } from 'ng-zorro-antd/grid';
-
+import { NzInputModule } from 'ng-zorro-antd/input';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 
 @NgModule({
   declarations: [],
@@ -13,13 +14,17 @@ import { NzGridModule } from 'ng-zorro-antd/grid';
     NzLayoutModule,
     NzMenuModule,
     NzCardModule,
-    NzGridModule
+    NzGridModule,
+    NzInputModule,
+    NzIconModule,
   ],
   exports: [
     NzLayoutModule,
     NzMenuModule,
     NzCardModule,
-    NzGridModule
-  ]
+    NzGridModule,
+    NzInputModule,
+    NzIconModule,
+  ],
 })
-export class NgZorroModule { }
+export class NgZorroModule {}
