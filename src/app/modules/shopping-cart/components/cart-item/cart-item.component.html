@@ -1,0 +1,37 @@
+<div nz-row *ngIf="cartItem else skeleton">
+  <div nz-col
+        class="gutter-row p-0"
+        nzXs="24"
+        nzSm="24"
+        nzMd="12"
+        nzLg="12"
+        nzXl="12">
+
+  </div>
+  <div nz-col
+        class="gutter-row p-0"
+        nzXs="24"
+        nzSm="24"
+        nzMd="6"
+        nzLg="6"
+        nzXl="6">
+        <app-increment-decrement></app-increment-decrement>
+  </div>
+  <div nz-col
+        class="gutter-row p-0"
+        nzXs="24"
+        nzSm="24"
+        nzMd="6"
+        nzLg="6"
+        nzXl="6">
+       {{ cartItem.product.price | currency }}
+  </div>
+
+
+</div>
+
+<ng-template #skeleton>
+  <div>
+    loading...
+  </div>
+</ng-template>

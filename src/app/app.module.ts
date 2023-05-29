@@ -15,6 +15,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { HomeModule } from './modules/home/home.module';
 import { SharedModule } from './shared/shared.module';
+import { ShoppingCartModule } from './modules/shopping-cart/shopping-cart.module';
 
 registerLocaleData(en);
 
@@ -30,6 +31,7 @@ registerLocaleData(en);
     EffectsModule.forRoot([]),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
     HomeModule,
+    ShoppingCartModule,
     SharedModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
