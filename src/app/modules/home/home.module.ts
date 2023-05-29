@@ -8,9 +8,20 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { FormsModule } from '@angular/forms';
 import { CoreModule } from 'src/app/core/core.module';
+import { StoreModule } from '@ngrx/store';
+import { HomeFeature } from './state';
+import { EffectsModule } from '@ngrx/effects';
+import * as HomeEffects from './state/effects'
 
 @NgModule({
   declarations: [HomeShell, ProductCardComponent, ProductListComponent],
-  imports: [HomeRoutingModule, FormsModule, CoreModule, SharedModule],
+  imports: [
+    HomeRoutingModule,
+    FormsModule,
+    CoreModule,
+    SharedModule,
+    EffectsModule.forFeature([HomeEffects]),
+    StoreModule.forFeature(HomeFeature)
+  ],
 })
 export class HomeModule {}

@@ -12,7 +12,7 @@
       <span nz-icon nzType="search"></span>
     </ng-template>
   </div>
-  <div nz-row [nzGutter]="16">
+  <div nz-row [nzGutter]="16" *ngIf="products && !isLoading">
     <div
       nz-col
       class="gutter-row p-0"

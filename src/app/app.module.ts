@@ -32,7 +32,7 @@ registerLocaleData(en);
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
     HomeModule,
     ShoppingCartModule,
-    SharedModule,
+    SharedModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent],
