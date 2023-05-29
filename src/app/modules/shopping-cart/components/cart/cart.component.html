@@ -1,5 +1,6 @@
 <div class="flex flex-column">
-  <div nz-row class="mb-3">
+
+  <div nz-row class="mb-3 hidden sm:hidden md:flex ">
     <div nz-col
           class="gutter-row flex align-items-center justify-content-center font-bold"
           nzXs="24"
@@ -40,9 +41,23 @@
   </div>
   <div  *ngFor="let item of items; last as isLast">
     <app-cart-item [cartItem]="item" >
-
     </app-cart-item>
 
-    <nz-divider *ngIf="!isLast"></nz-divider>
+    <nz-divider></nz-divider>
+  </div>
+  <div class="flex flex-column">
+    <div class="flex justify-content-end font-bold py-2 px-8 text-lg">
+      <span class="mx-3">Total: </span>
+      <span> {{ total | currency }} </span>
+    </div>
+    <div class="flex justify-content-end py-2 px-6">
+      <button class="checkout flex justify-content-center align-items-center">
+        <span class="material-symbols-outlined mr-2">
+          shopping_cart_checkout
+        </span>
+       Proceed to Checkout
+      </button>
+    </div>
+
   </div>
 </div>

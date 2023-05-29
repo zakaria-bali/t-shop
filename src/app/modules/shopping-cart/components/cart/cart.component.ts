@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CartItem } from 'src/app/core/models/cart.model';
+import { CartService } from 'src/app/core/services/cart.service';
 
 @Component({
   selector: 'app-cart',
@@ -41,6 +42,15 @@ export class CartComponent {
         One of the standout features of the Cover Armchair is its ergonomic design. The backrest is contoured to provide optimal lumbar support, promoting proper posture and reducing strain on the back. The armrests are positioned at a comfortable height, allowing for relaxed arm and shoulder positioning. These thoughtful design elements contribute to a comfortable and relaxing seating experience, making the armchair ideal for extended periods of reading, lounging, or simply unwinding.`,
       },
     }
-  ]
+  ];
+
+  private _total: number = 0;
+
+  get total(): number {
+    this._total = this.cartService.calculateTotal(this.items);
+    return this._total;
+  }
+
+  constructor(public cartService: CartService) {}
 
 }

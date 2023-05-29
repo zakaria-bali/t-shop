@@ -1,6 +1,6 @@
 <div nz-row *ngIf="cartItem else skeleton">
   <div nz-col
-        class="gutter-row p-0"
+        class="gutter-row p-0 flex align-items-center justify-content-center md:justify-content-start mb-3 md:mb-0"
         nzXs="24"
         nzSm="24"
         nzMd="12"
@@ -10,16 +10,16 @@
 
   </div>
   <div nz-col
-        class="gutter-row p-0 flex align-items-center justify-content-center"
+        class="gutter-row p-0 flex align-items-center justify-content-center mb-3 md:mb-0"
         nzXs="24"
         nzSm="24"
         nzMd="6"
         nzLg="6"
         nzXl="6">
-        <app-increment-decrement [(ngModel)]="cartItem.quantity"></app-increment-decrement>
+        <app-increment-decrement [(ngModel)]="cartItem.quantity" (valueChanged)="onQuantityChanged($event)"></app-increment-decrement>
   </div>
   <div nz-col
-        class="gutter-row p-0  flex align-items-center justify-content-center font-bold"
+        class="gutter-row p-0  flex align-items-center justify-content-center font-bold mb-3 md:mb-0"
         nzXs="24"
         nzSm="24"
         nzMd="4"
@@ -28,7 +28,7 @@
        {{ cartItem.product.price | currency }}
   </div>
   <div nz-col
-        class="gutter-row p-0  flex align-items-center justify-content-center font-bold"
+        class="gutter-row p-0  flex align-items-center justify-content-center font-bold mb-3 md:mb-0"
         nzXs="24"
         nzSm="24"
         nzMd="2"

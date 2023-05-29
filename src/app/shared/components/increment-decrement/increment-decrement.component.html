@@ -1,6 +1,6 @@
 
 <nz-input-number-group [nzAddOnBefore]="plus" [nzAddOnAfter]="minus">
-  <nz-input-number [(ngModel)]="value" [nzStep]="1" [nzMin]="1" [disabled]="isDisabled" (ngModelChange)="updateValue()"></nz-input-number>
+  <nz-input-number [(ngModel)]="value" [nzStep]="1" [nzMin]="1" [disabled]="isDisabled" (ngModelChange)="onValueChanged()"></nz-input-number>
 </nz-input-number-group>
 
 <ng-template #plus>
