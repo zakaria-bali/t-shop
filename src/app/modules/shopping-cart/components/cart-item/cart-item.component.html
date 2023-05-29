@@ -6,27 +6,38 @@
         nzMd="12"
         nzLg="12"
         nzXl="12">
+    <app-simple-product-card [product]="cartItem.product" [isCart]="true"></app-simple-product-card>
 
   </div>
   <div nz-col
-        class="gutter-row p-0"
+        class="gutter-row p-0 flex align-items-center justify-content-center"
         nzXs="24"
         nzSm="24"
         nzMd="6"
         nzLg="6"
         nzXl="6">
-        <app-increment-decrement></app-increment-decrement>
+        <app-increment-decrement [(ngModel)]="cartItem.quantity"></app-increment-decrement>
   </div>
   <div nz-col
-        class="gutter-row p-0"
+        class="gutter-row p-0  flex align-items-center justify-content-center font-bold"
         nzXs="24"
         nzSm="24"
-        nzMd="6"
-        nzLg="6"
-        nzXl="6">
+        nzMd="4"
+        nzLg="4"
+        nzXl="4">
        {{ cartItem.product.price | currency }}
   </div>
-
+  <div nz-col
+        class="gutter-row p-0  flex align-items-center justify-content-center font-bold"
+        nzXs="24"
+        nzSm="24"
+        nzMd="2"
+        nzLg="2"
+        nzXl="2">
+      <button class="action">
+        <span nz-icon nzType="delete" nzTheme="outline"></span>
+      </button>
+  </div>
 
 </div>
 

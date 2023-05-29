@@ -1,1 +1,48 @@
-<p>cart works!</p>
+<div class="flex flex-column">
+  <div nz-row class="mb-3">
+    <div nz-col
+          class="gutter-row flex align-items-center justify-content-center font-bold"
+          nzXs="24"
+          nzSm="24"
+          nzMd="12"
+          nzLg="12"
+          nzXl="12">
+      Item
+
+    </div>
+    <div nz-col
+          class="gutter-row p-0 flex align-items-center justify-content-center font-bold"
+          nzXs="24"
+          nzSm="24"
+          nzMd="6"
+          nzLg="6"
+          nzXl="6">
+         Quantity
+    </div>
+    <div nz-col
+          class="gutter-row p-0 flex align-items-center justify-content-center font-bold"
+          nzXs="24"
+          nzSm="24"
+          nzMd="4"
+          nzLg="4"
+          nzXl="4">
+        Price
+    </div>
+    <div nz-col
+          class="gutter-row p-0 flex align-items-center justify-content-center font-bold"
+          nzXs="24"
+          nzSm="24"
+          nzMd="2"
+          nzLg="2"
+          nzXl="2">
+    </div>
+
+  </div>
+  <div  *ngFor="let item of items; last as isLast">
+    <app-cart-item [cartItem]="item" >
+
+    </app-cart-item>
+
+    <nz-divider *ngIf="!isLast"></nz-divider>
+  </div>
+</div>
