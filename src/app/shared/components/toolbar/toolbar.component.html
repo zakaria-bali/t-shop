@@ -1,8 +1,14 @@
 <nz-header>
-  <div class="logo">T-SHOP</div>
-  <ul nz-menu nzMode="horizontal">
-    <li nz-menu-item>nav 1</li>
-    <li nz-menu-item>nav 2</li>
-    <li nz-menu-item>nav 3</li>
+  <a routerLink="/" class="logo">T-SHOP</a>
+  <ul nz-menu nzMode="horizontal" class="">
+
+    <a routerLink="/shopping-cart" class="cart">
+      <nz-badge nzSize="default" [nzCount]="cartSize">
+        <span class="material-symbols-outlined cart-icon">
+          shopping_cart
+        </span>
+      </nz-badge>
+    </a>
   </ul>
+
 </nz-header>

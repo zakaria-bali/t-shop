@@ -12,8 +12,23 @@ nz-header {
   align-items: center;
   font-weight: 500;
   font-size: 30px;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.cart {
+  color: rgba(0, 0, 0, 0.85);
+  float: right;
+  margin: 8px 0px 0px 24px;
+}
+
+.cart-icon {
+  font-size: 30px !important;
 }
 
 [nz-menu] {
   line-height: 64px;
+}
+
+:host::ng-deep.ant-badge-count {
+  background-color: rgba(0, 0, 0, 0.85);
 }
