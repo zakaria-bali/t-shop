@@ -3,7 +3,7 @@
     Related Products
   </h1>
   <div *ngFor="let product of products; last as isLast" [ngClass]="{'mb-3': !isLast}">
-    <app-related-product [product]="product"></app-related-product>
+    <app-simple-product-card [product]="product"></app-simple-product-card>
     <nz-divider *ngIf="!isLast"></nz-divider>
   </div>
 </div>

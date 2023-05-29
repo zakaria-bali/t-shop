@@ -9,7 +9,6 @@ import { FormsModule } from '@angular/forms';
 import { ReviewComponent } from './components/review/review.component';
 import { ReviewsListComponent } from './components/reviews-list/reviews-list.component';
 import { RelatedProductListComponent } from './components/related-product-list/related-product-list.component';
-import { RelatedProductComponent } from './components/related-product/related-product.component';
 
 
 @NgModule({
@@ -19,13 +18,12 @@ import { RelatedProductComponent } from './components/related-product/related-pr
     ReviewComponent,
     ReviewsListComponent,
     RelatedProductListComponent,
-    RelatedProductComponent
   ],
   imports: [
     CommonModule,
     ProductDetailsRoutingModule,
     SharedModule,
-     FormsModule
+    FormsModule
   ]
 })
 export class ProductDetailsModule { }

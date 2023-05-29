@@ -5,10 +5,12 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { IncrementDecrementComponent } from './components/increment-decrement/increment-decrement.component';
 import { FormsModule } from '@angular/forms';
+import { SimpleProductCardComponent } from './components/simple-product-card/simple-product-card.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [ToolbarComponent, FooterComponent, IncrementDecrementComponent],
-  imports: [CommonModule, NgZorroModule, FormsModule],
-  exports: [CommonModule, NgZorroModule, ToolbarComponent, FooterComponent, IncrementDecrementComponent],
+  declarations: [ToolbarComponent, FooterComponent, IncrementDecrementComponent, SimpleProductCardComponent],
+  imports: [CommonModule, NgZorroModule, FormsModule, RouterModule],
+  exports: [CommonModule, NgZorroModule, ToolbarComponent, FooterComponent, IncrementDecrementComponent, SimpleProductCardComponent],
 })
 export class SharedModule {}

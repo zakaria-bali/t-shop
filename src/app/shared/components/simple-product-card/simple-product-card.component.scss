@@ -9,10 +9,19 @@
   max-height: 100px;
 }
 
+.small-img  {
+  max-width: 40px;
+  max-height: 40px;
+}
+
 .product-title {
   color: rgba(0,0,0,.85);
   font-weight: 500;
   font-size: 24px;
+}
+
+.small-title {
+  font-size: 18px;
 }
 
 .product:hover {
@@ -24,4 +33,9 @@
 .price {
   font-weight: 500;
   font-size: 18px;
+}
+
+.short-description {
+  font-size: 12px;
+  margin-top: 10px;
 }
