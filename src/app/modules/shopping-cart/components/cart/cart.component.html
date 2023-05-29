@@ -39,25 +39,29 @@
     </div>
 
   </div>
-  <div  *ngFor="let item of items; last as isLast">
-    <app-cart-item [cartItem]="item" >
-    </app-cart-item>
+  <form [formGroup]="cartService.cartForm" (submit)="onSubmit()">
+    <ng-container formArrayName="items">
+      <div  *ngFor="let item of cartService.items.controls; index as i">
+        <app-cart-item [cartItem]="item.value" formControlName="{{i}}" >
+        </app-cart-item>
+        <nz-divider></nz-divider>
+      </div>
+    </ng-container>
+    <div class="flex flex-column">
+      <div class="flex justify-content-end font-bold py-2 px-8 text-lg">
+        <span class="mx-3">Total: </span>
+        <span> {{ total | currency }} </span>
+      </div>
+      <div class="flex justify-content-end py-2 px-6">
+        <button class="checkout flex justify-content-center align-items-center" type="submit">
+          <span class="material-symbols-outlined mr-2">
+            shopping_cart_checkout
+          </span>
+         Proceed to Checkout
+        </button>
+      </div>
 
-    <nz-divider></nz-divider>
-  </div>
-  <div class="flex flex-column">
-    <div class="flex justify-content-end font-bold py-2 px-8 text-lg">
-      <span class="mx-3">Total: </span>
-      <span> {{ total | currency }} </span>
-    </div>
-    <div class="flex justify-content-end py-2 px-6">
-      <button class="checkout flex justify-content-center align-items-center">
-        <span class="material-symbols-outlined mr-2">
-          shopping_cart_checkout
-        </span>
-       Proceed to Checkout
-      </button>
     </div>
 
-  </div>
+  </form>
 </div>

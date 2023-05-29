@@ -4,7 +4,7 @@
 </nz-input-number-group>
 
 <ng-template #plus>
-  <button class="flex justify-content-center align-items-center action plus" (click)="decrement()">
+  <button class="flex justify-content-center align-items-center action plus" type="button" (click)="decrement()">
 
     <span class="material-symbols-outlined">
       remove
@@ -13,7 +13,7 @@
 </ng-template>
 
 <ng-template #minus>
-  <button class="flex justify-content-center align-items-center action minus" (click)="increment()">
+  <button class="flex justify-content-center align-items-center action minus" type="button" (click)="increment()">
     <span class="material-symbols-outlined">
       add
     </span>

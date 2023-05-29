@@ -6,7 +6,7 @@ import { ShoppingCartShell } from './shopping-cart.shell';
 import { CartComponent } from './components/cart/cart.component';
 import { CartItemComponent } from './components/cart-item/cart-item.component';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     ShoppingCartRoutingModule,
     SharedModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class ShoppingCartModule { }

@@ -1,15 +1,23 @@
 import { Component, Input } from '@angular/core';
-import { ControlValueAccessor } from '@angular/forms';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { CartItem } from 'src/app/core/models/cart.model';
 
 @Component({
   selector: 'app-cart-item',
   templateUrl: './cart-item.component.html',
-  styleUrls: ['./cart-item.component.scss']
+  styleUrls: ['./cart-item.component.scss'],
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      multi: true,
+      useExisting: CartItemComponent,
+    },
+  ],
+
 })
 export class CartItemComponent implements ControlValueAccessor {
 
-  @Input({ required: true })
+  @Input()
   cartItem: CartItem | undefined;
 
   isDisabled: boolean = false;
@@ -19,6 +27,7 @@ export class CartItemComponent implements ControlValueAccessor {
   onTouched = () => {};
 
   writeValue(item: CartItem): void {
+
     if (item) {
       this.cartItem = item;
     }

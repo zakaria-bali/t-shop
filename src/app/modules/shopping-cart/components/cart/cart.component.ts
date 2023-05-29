@@ -51,6 +51,14 @@ export class CartComponent {
     return this._total;
   }
 
-  constructor(public cartService: CartService) {}
+  constructor(public cartService: CartService) {
+    this.cartService.itemsToFormArray(this.items);
+  }
+
+
+  onSubmit() {
+    console.log('VALUE')
+    console.log(this.cartService.cartForm.value);
+  }
 
 }
