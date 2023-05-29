@@ -7,6 +7,9 @@ import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
+import { NzAvatarModule } from 'ng-zorro-antd/avatar';
+import { NzRateModule } from 'ng-zorro-antd/rate';
+import { NzDividerModule } from 'ng-zorro-antd/divider';
 
 @NgModule({
   declarations: [],
@@ -19,6 +22,9 @@ import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
     NzInputModule,
     NzIconModule,
     NzInputNumberModule,
+    NzAvatarModule,
+    NzRateModule,
+    NzDividerModule,
   ],
   exports: [
     NzLayoutModule,
@@ -28,6 +34,9 @@ import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
     NzInputModule,
     NzIconModule,
     NzInputNumberModule,
+    NzAvatarModule,
+    NzRateModule,
+    NzDividerModule,
   ],
 })
 export class NgZorroModule {}

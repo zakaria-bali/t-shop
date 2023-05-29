@@ -1,0 +1,9 @@
+<div class="flex flex-column p-5">
+  <h1 class="mb-6">
+    Reviews
+  </h1>
+  <div  *ngFor="let review of reviews; last as isLast" [ngClass]="{'mb-3': !isLast}">
+    <app-review [review]="review"></app-review>
+    <nz-divider *ngIf="!isLast"></nz-divider>
+  </div>
+</div>

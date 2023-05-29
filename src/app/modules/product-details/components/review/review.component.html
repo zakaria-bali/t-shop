@@ -1,0 +1,25 @@
+<div class="w-full" *ngIf="review else skeleton">
+  <div class="flex justify-content-between">
+    <div class="flex justify-content-start align-items-center">
+      <nz-avatar [nzSize]="64" nzIcon="user" [nzSrc]="review.imageUrl"></nz-avatar>
+      <!-- <nz-avatar [nzSize]="64" nzIcon="user" *ngIf="review.imageUrl"></nz-avatar> -->
+
+      <h2 class="ml-2"> {{ review.name }} </h2>
+    </div>
+    <div class="flex justify-content-center align-items-center review-date">
+      {{ review.publishDate | date }}
+    </div>
+  </div>
+  <div class="rate">
+    <nz-rate [ngModel]="review.rate" nzDisabled></nz-rate>
+  </div>
+  <p>
+    {{ review.description }}
+  </p>
+</div>
+
+<ng-template #skeleton>
+  <div>
+    loading...
+  </div>
+</ng-template>
