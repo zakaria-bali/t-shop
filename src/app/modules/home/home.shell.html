@@ -2,5 +2,9 @@
   <app-product-list
     [products]="(products$ | async)"
     [isLoading]="(isLoading$ | async) ?? false"
-    [errorMessage]="(errorMessage$ | async) ?? ''"></app-product-list>
+    [errorMessage]="(errorMessage$ | async) ?? ''"
+    [selectedProductsIds]="(selectedProductsIds$ | async) ?? []"
+    (addToCart)="onAddToCart($event)"
+    (removeFromCart)="onRemoveFromCart($event)"
+    ></app-product-list>
 </div>

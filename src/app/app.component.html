@@ -1,5 +1,5 @@
 <nz-layout>
-  <app-toolbar></app-toolbar>
+  <app-toolbar [cartSize]="(cartSize$ | async) ?? 0"></app-toolbar>
   <nz-content>
     <router-outlet></router-outlet>
   </nz-content>

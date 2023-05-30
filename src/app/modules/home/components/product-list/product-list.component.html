@@ -23,8 +23,11 @@
       nzXl="6"
       *ngFor="let product of products | productsFilter : searchKeyword"
     >
-      <!-- <div class="inner-box">col-6</div> -->
-      <app-product-card [product]="product"></app-product-card>
+      <app-product-card
+        [product]="product"
+        [selectedProductsIds]="selectedProductsIds"
+        (addToCart)="onAddToCart($event)"
+        (removeFromCart)="onRemoveFromCart($event)"  ></app-product-card>
     </div>
   </div>
 </div>

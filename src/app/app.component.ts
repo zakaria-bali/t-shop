@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { getCartSize } from './modules/shopping-cart/state';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 't-shop';
+  title = 'T-Shop';
+
+  cartSize$: Observable<number> = this.store.select(getCartSize);
+
+  constructor(private store: Store) {
+
+  }
 }

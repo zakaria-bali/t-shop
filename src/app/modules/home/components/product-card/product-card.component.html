@@ -14,13 +14,16 @@
     <p class="product-description text-sm">
       {{ product.shortDescription }}
     </p>
-    <button class="flex justify-content-center align-items-center cart-action">
+    <button class="flex justify-content-center align-items-center cart-action"
+      (click)="addToCartClicked()"
+      *ngIf="!selectedProductsIds.includes(product.id)">
       <span class="material-symbols-outlined mr-1"> add_shopping_cart </span>
       Add To Cart
     </button>
     <button
       class="flex justify-content-center align-items-center cart-action"
-      *ngIf="false"
+      (click)="removeFromCartClicked()"
+      *ngIf="selectedProductsIds.includes(product.id)"
     >
       <span class="material-symbols-outlined"> remove_shopping_cart </span>
       Remove from Cart

@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./shopping-cart.shell.scss']
 })
 export class ShoppingCartShell {
-
+  
 }

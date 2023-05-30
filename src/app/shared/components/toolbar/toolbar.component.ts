@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-toolbar',
@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./toolbar.component.scss'],
 })
 export class ToolbarComponent {
-
+  @Input()
   cartSize: number = 1;
 
 }

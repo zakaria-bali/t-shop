@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Product } from 'src/app/core/models/product.model';
 
 @Component({
@@ -17,5 +17,22 @@ export class ProductListComponent {
 
   @Input()
   isLoading: boolean = false;
+
+  @Input()
+  selectedProductsIds: (string|number)[] = []
+
+  @Output()
+  addToCart: EventEmitter<Product> = new EventEmitter<Product>();
+
+  @Output()
+  removeFromCart: EventEmitter<string | number> = new EventEmitter< string | number >();
+
+  onAddToCart(product: Product) {
+    this.addToCart.emit(product);
+  }
+
+  onRemoveFromCart(id: number | string) {
+    this.removeFromCart.emit(id);
+  }
 
 }
