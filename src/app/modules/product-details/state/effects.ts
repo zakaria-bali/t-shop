@@ -45,6 +45,34 @@ export const loadRelatedProduct$ = createEffect(() => {
       catchError((error) => of(ProductDetailsActions.loadRelatedProductsFail({ errorMessage: error.error.detail })))
     ))
   )
-}, { functional: true })
+}, { functional: true });
+
+export const dispatchLoadReviews$ = createEffect(() => {
+  const actions$ = inject(Actions);
+  return actions$.pipe(
+    ofType(ProductDetailsActions.loadProductDetailsSuccess),
+    map((action) => ProductDetailsActions.loadProductReviews({ id: action.product.id }))
+  )
+}, { functional: true });
+
+export const dispatchLoadReviewsFail$ = createEffect(() => {
+  const actions$ = inject(Actions);
+  return actions$.pipe(
+    ofType(ProductDetailsActions.loadProductDetailsFail),
+    map((action) => ProductDetailsActions.loadProductReviewsFail({ errorMessage: "Product loading fail" }))
+  )
+}, { functional: true });
+
+export const loadProductReviews$ = createEffect(() => {
+  const actions$ = inject(Actions);
+  const productDetailsService = inject(ProductDetailsService);
+  return actions$.pipe(
+    ofType(ProductDetailsActions.loadProductReviews),
+    mergeMap((action) => productDetailsService.getProductReviews(action.id).pipe(
+      map((reviews) => ProductDetailsActions.loadProductReviewsSuccess({ reviews })),
+      catchError((error) => of(ProductDetailsActions.loadProductReviewsFail({ errorMessage: error.error.detail })))
+    ))
+  )
+}, { functional: true });
 
 

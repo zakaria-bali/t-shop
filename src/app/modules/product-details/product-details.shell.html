@@ -21,8 +21,11 @@
       nzXl="12"
 
     >
-      <app-reviews-list>
-
+      <app-reviews-list
+        [reviews]="reviews$ | async"
+        [isLoading]="(isLoadingReviews$ | async) ?? false"
+        [errorMessage]="(reviewsErrorMessage$ | async) ?? ''"
+      >
       </app-reviews-list>
     </div>
     <div
@@ -33,13 +36,11 @@
       nzMd="12"
       nzLg="12"
       nzXl="12"
-
     >
     <app-related-product-list
       [products]="relatedProducts$ | async"
       [isLoading]="(isLoadingRelatedProducts$ |async) ?? false"
       [errorMessage]="(relatedProductsErrorMessage$ | async) ?? ''">
-
     </app-related-product-list>
     </div>
 

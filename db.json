@@ -166,5 +166,247 @@
       "shortDescription": "Efficient, Compact Dish Drainer for Drying.",
       "description": "<p>The Dish Drainer is a functional and practical kitchen accessory designed to facilitate the drying and organization of dishes, utensils, and other kitchenware. This essential tool helps to streamline the dishwashing process, allowing wet items to air dry efficiently while keeping the kitchen countertop clean and tidy.</p>\n\n      <p>The Dish Drainer typically consists of a sturdy and durable base with elevated sections or slots for holding plates, bowls, glasses, and other items upright. It may also feature separate compartments or slots for utensils, providing designated spaces for efficient drying and organization. The drainer is usually made of materials such as plastic, stainless steel, or silicone, which are easy to clean and resistant to water damage.</p>\n\n      <p>Using a Dish Drainer offers several advantages. Firstly, it allows freshly washed dishes to dry naturally, reducing the need for hand-drying and minimizing the risk of bacterial growth associated with damp kitchenware. By providing proper ventilation and airflow, the drainer helps to speed up the drying process, ensuring that dishes are ready for storage or immediate use.</p>"
     }
+  ],
+  "1": [
+    {
+      "id": 1,
+      "name": "Mohamed Ali",
+      "publishDate": "2023-04-15",
+      "rate": 4.5,
+      "description": "Experience the epitome of comfort and sophistication with our Elegant Lounge Chair. Its sleek design and plush cushions will elevate your relaxation experience to new heights.",
+      "imageUrl": "assets/images/happy-person.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Gilgamesh",
+      "publishDate": "2023-03-27",
+      "rate": 4.2,
+      "description": "Unwind in style with our Modern Luxe Lounger. Its ergonomic shape and premium upholstery will provide optimal comfort and add a touch of contemporary elegance to your space.",
+      "imageUrl": ""
+    },
+    {
+      "id": 3,
+      "name": "Kamado Tanjiro",
+      "publishDate": "2023-02-10",
+      "rate": 4.7,
+      "description": "Indulge in ultimate relaxation with our Classic Comfort Recliner. Its timeless design, adjustable reclining positions, and plush padding make it the perfect companion for cozy evenings.",
+      "imageUrl": ""
+    }
+  ],
+  "2": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "publishDate": "2023-05-28",
+      "rate": 4,
+      "description": "I really love the comfort and style of the Cover Armchair. It's a great addition to my living room.",
+      "imageUrl": ""
+    },
+    {
+      "id": 2,
+      "name": "Emily Smith",
+      "publishDate": "2023-05-29",
+      "rate": 5,
+      "description": "The Cover Armchair exceeded my expectations. It's incredibly comfortable and the design is stunning.",
+      "imageUrl": ""
+    },
+    {
+      "id": 3,
+      "name": "David Johnson",
+      "publishDate": "2023-05-30",
+      "rate": 3,
+      "description": "I found the Cover Armchair to be decent. The quality is good, but it's not as comfortable as I had hoped.",
+      "imageUrl": ""
+    },
+    {
+      "id": 4,
+      "name": "Sarah Thompson",
+      "publishDate": "2023-05-30",
+      "rate": 5,
+      "description": "The Cover Armchair is simply amazing! It's both stylish and comfortable. I highly recommend it.",
+      "imageUrl": ""
+    }
+  ],
+  "3": [
+    {
+      "id": 1,
+      "name": "Alice Johnson",
+      "publishDate": "2023-05-28",
+      "rate": 4,
+      "description": "The Decorative Office Seat adds a touch of elegance to my workspace. It's comfortable and enhances the overall aesthetics.",
+      "imageUrl": ""
+    },
+    {
+      "id": 2,
+      "name": "Robert Smith",
+      "publishDate": "2023-05-30",
+      "rate": 5,
+      "description": "I'm extremely pleased with the Decorative Office Seat. It's not only visually appealing but also provides excellent support for long working hours.",
+      "imageUrl": ""
+    }
+  ],
+  "4": [
+    {
+      "id": 1,
+      "name": "Emma Wilson",
+      "publishDate": "2023-05-28",
+      "rate": 4,
+      "description": "The Indoor Planter is a beautiful addition to my home decor. It's well-crafted and adds a touch of greenery to any room.",
+      "imageUrl": ""
+    },
+    {
+      "id": 2,
+      "name": "Michael Davis",
+      "publishDate": "2023-05-29",
+      "rate": 5,
+      "description": "I'm impressed with the quality and design of the Indoor Planter. It's a perfect way to display my favorite plants indoors.",
+      "imageUrl": ""
+    },
+    {
+      "id": 3,
+      "name": "Olivia Thompson",
+      "publishDate": "2023-05-30",
+      "rate": 3,
+      "description": "The Indoor Planter is decent, but I expected it to be slightly larger. Nonetheless, it's a nice addition to my plant collection.",
+      "imageUrl": ""
+    },
+    {
+      "id": 4,
+      "name": "James Miller",
+      "publishDate": "2023-05-30",
+      "rate": 5,
+      "description": "I absolutely love the Indoor Planter! It's stylish, versatile, and adds a refreshing touch to any indoor space.",
+      "imageUrl": ""
+    },
+    {
+      "id": 5,
+      "name": "Sophia Harris",
+      "publishDate": "2023-05-30",
+      "rate": 4,
+      "description": "The Indoor Planter is well-made and beautifully complements my home decor. It's a great choice for plant enthusiasts.",
+      "imageUrl": ""
+    }
+  ],
+  "5": [
+    {
+      "id": 1,
+      "name": "Emily Johnson",
+      "publishDate": "2023-05-28",
+      "rate": 4,
+      "description": "The Milk Frother works great! It froths milk quickly and creates creamy foam for my cappuccinos.",
+      "imageUrl": ""
+    },
+    {
+      "id": 2,
+      "name": "David Smith",
+      "publishDate": "2023-05-29",
+      "rate": 5,
+      "description": "I'm impressed with the Milk Frother. It's easy to use, and the frothed milk enhances the taste of my coffee.",
+      "imageUrl": ""
+    },
+    {
+      "id": 3,
+      "name": "Sophia Davis",
+      "publishDate": "2023-05-30",
+      "rate": 3,
+      "description": "The Milk Frother is decent, but I found it a bit noisy during operation. The frothing results are satisfactory.",
+      "imageUrl": ""
+    },
+    {
+      "id": 4,
+      "name": "Daniel Wilson",
+      "publishDate": "2023-05-30",
+      "rate": 5,
+      "description": "I love the Milk Frother! It creates perfectly frothed milk for my lattes, and the design is sleek and compact.",
+      "imageUrl": ""
+    }
+  ],
+  "6": [
+    {
+      "id": 1,
+      "name": "Sarah Thompson",
+      "publishDate": "2023-05-28",
+      "rate": 4,
+      "description": "The Pedal Bin is sturdy and practical. It has a large capacity and the pedal mechanism works smoothly.",
+      "imageUrl": ""
+    },
+    {
+      "id": 2,
+      "name": "John Smith",
+      "publishDate": "2023-05-29",
+      "rate": 3,
+      "description": "The Pedal Bin is decent for everyday use. However, the lid could be more secure to prevent odors from escaping.",
+      "imageUrl": ""
+    },
+    {
+      "id": 3,
+      "name": "Emily Wilson",
+      "publishDate": "2023-05-30",
+      "rate": 5,
+      "description": "I'm extremely satisfied with the Pedal Bin. It's sleek, durable, and the foot pedal operation is convenient.",
+      "imageUrl": ""
+    }
+  ],
+  "7": [
+    {
+      "id": 1,
+      "name": "Alexandra Davis",
+      "publishDate": "2023-05-30",
+      "rate": 4,
+      "description": "The Foot Rest is a great addition to my workspace. It provides excellent support and helps alleviate leg fatigue during long working hours.",
+      "imageUrl": ""
+    }
+  ],
+  "8": [
+    {
+      "id": 1,
+      "name": "Jennifer Wilson",
+      "publishDate": "2023-05-28",
+      "rate": 5,
+      "description": "The Hook For Door is fantastic! It's sturdy, easy to install, and provides a convenient solution for hanging coats and bags.",
+      "imageUrl": ""
+    },
+    {
+      "id": 2,
+      "name": "Michael Thompson",
+      "publishDate": "2023-05-29",
+      "rate": 4,
+      "description": "I'm pleased with the Hook For Door. It's well-made and has multiple hooks to keep my belongings organized.",
+      "imageUrl": ""
+    },
+    {
+      "id": 3,
+      "name": "Emily Johnson",
+      "publishDate": "2023-05-30",
+      "rate": 3,
+      "description": "The Hook For Door is decent, but I found the hooks to be a bit close together. It can be challenging to hang larger items.",
+      "imageUrl": ""
+    },
+    {
+      "id": 4,
+      "name": "Daniel Davis",
+      "publishDate": "2023-05-30",
+      "rate": 5,
+      "description": "I love the Hook For Door! It's stylish and practical. The hooks are well-spaced, and it helps keep my entryway organized.",
+      "imageUrl": ""
+    }
+  ],
+  "9": [
+    {
+      "id": 1,
+      "name": "Sophia Wilson",
+      "publishDate": "2023-05-28",
+      "rate": 4,
+      "description": "The Dish Drainer is practical and functional. It has ample space for drying dishes and helps keep my kitchen organized.",
+      "imageUrl": ""
+    },
+    {
+      "id": 2,
+      "name": "Jacob Thompson",
+      "publishDate": "2023-05-30",
+      "rate": 5,
+      "description": "I'm extremely satisfied with the Dish Drainer. It's well-designed, sturdy, and holds a good number of dishes and utensils.",
+      "imageUrl": ""
+    }
   ]
 }

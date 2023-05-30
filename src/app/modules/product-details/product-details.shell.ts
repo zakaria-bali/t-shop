@@ -8,6 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 import { getCartProductsIDs } from '../shopping-cart/state';
 import { CartItem, QuantityUpdate } from 'src/app/core/models/cart.model';
 import { ShoppingCartActions } from '../shopping-cart/state/actions';
+import { Review } from 'src/app/core/models/review.model';
 
 @Component({
   selector: 'app-product-details-shell',
@@ -22,6 +23,9 @@ export class ProductDetailsShell implements OnInit {
   relatedProducts$: Observable<Product[] | null> = this.store.select(ProductDetailsFeature.selectRelatedProducts);
   isLoadingRelatedProducts$: Observable<boolean> = this.store.select(ProductDetailsFeature.selectIsLoadingRelatedProducts);
   relatedProductsErrorMessage$: Observable<string> = this.store.select(ProductDetailsFeature.selectRelatedProductsErrorMessage);
+  reviews$: Observable<Review[] | null> = this.store.select(ProductDetailsFeature.selectReviews);
+  isLoadingReviews$: Observable<boolean> = this.store.select(ProductDetailsFeature.selectIsLoadingReviews);
+  reviewsErrorMessage$: Observable<string> = this.store.select(ProductDetailsFeature.selectReviewsErrorMessage);
 
   constructor(private store: Store, private route: ActivatedRoute) {}
 

@@ -29,7 +29,7 @@ const initialState: ProductDetailsState = {
 };
 
 export const ProductDetailsFeature = createFeature({
-  name: 'ProuctDetails',
+  name: 'ProductDetails',
   reducer: createReducer(
     initialState,
     on(ProductDetailsActions.loadProductDetails, (state) => ({ ...state, isLoadingProduct: true })),
