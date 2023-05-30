@@ -1,10 +1,12 @@
 <div class="m-0 p-0 md:px-4 lg:px-8 py-4">
-  <nz-breadcrumb>
-    <nz-breadcrumb-item>
-      <a routerLink="/">Home</a>
-    </nz-breadcrumb-item>
-    <nz-breadcrumb-item>Product Detials</nz-breadcrumb-item>
-  </nz-breadcrumb>
+  <div class="ml-4 sm:ml-4 md:ml-0">
+    <nz-breadcrumb>
+      <nz-breadcrumb-item>
+        <a routerLink="/">Home</a>
+      </nz-breadcrumb-item>
+      <nz-breadcrumb-item>Product Detials</nz-breadcrumb-item>
+    </nz-breadcrumb>
+  </div>
   <div>
     <app-product-details
       [product]="(product$  | async)"
