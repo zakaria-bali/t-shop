@@ -12,7 +12,7 @@
 
 <ng-template #skeleton>
   <ng-container *ngIf="isLoading else error">
-    <div *ngFor="let product of [].constructor().fill(1); last as isLast" [ngClass]="{'mb-3': !isLast}" >
+    <div *ngFor="let product of [].constructor(3).fill(1); last as isLast" [ngClass]="{'mb-3': !isLast}" >
       <app-simple-product-card [product]="undefined"></app-simple-product-card>
       <nz-divider *ngIf="!isLast"></nz-divider>
   </div>

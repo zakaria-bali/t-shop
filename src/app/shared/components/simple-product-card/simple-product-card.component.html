@@ -16,7 +16,39 @@
 </div>
 
 <ng-template #skeleton>
-  <div>
-    loading...
+  <div class="w-full flex flex-row product">
+    <div >
+      <div class="img-container p-4" [ngClass]="{ 'p-2': isCart }">
+        <nz-skeleton-element
+          nzType="image"
+          [nzActive]="true"
+        ></nz-skeleton-element>
+      </div>
+    </div>
+    <div class="flex flex-column ml-3" [ngClass]="{ 'justify-content-center align-items-start': isCart }">
+      <a  class="product-title" [ngClass]="{ 'small-title': isCart }">
+        <nz-skeleton-element
+              nzType="input"
+              [nzActive]="true"
+              [nzSize]="isCart? 'small' : 'default'"
+
+          ></nz-skeleton-element>
+      </a>
+      <div class="price" *ngIf="!isCart">
+        <nz-skeleton-element
+              nzType="button"
+              [nzActive]="true"
+
+          ></nz-skeleton-element>
+      </div>
+      <div class="short-description" *ngIf="isCart">
+        <nz-skeleton-element
+              nzType="input"
+              [nzActive]="true"
+              nzSize="small"
+            ></nz-skeleton-element>
+      </div>
+    </div>
   </div>
+
 </ng-template>
