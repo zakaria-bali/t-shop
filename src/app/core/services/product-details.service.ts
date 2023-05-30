@@ -14,4 +14,8 @@ export class ProductDetailsService {
   getProductDetails(id: number | string): Observable<Product> {
     return this.http.get<Product>(`${environment.BASE_URL}/products/${id}`);
   }
+
+  getRelatedProducts(category: string): Observable<Product[]> {
+    return this.http.get<Product[]>(`${environment.BASE_URL}/${category}`);
+  }
 }

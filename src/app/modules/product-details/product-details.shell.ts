@@ -19,6 +19,9 @@ export class ProductDetailsShell implements OnInit {
   isLoadingProduct$: Observable<boolean> = this.store.select(ProductDetailsFeature.selectIsLoadingProduct);
   productErrorMessage$: Observable<string> = this.store.select(ProductDetailsFeature.selectProductErrorMessage);
   selectedProductsIds$: Observable<(string | number)[]> = this.store.select(getCartProductsIDs);
+  relatedProducts$: Observable<Product[] | null> = this.store.select(ProductDetailsFeature.selectRelatedProducts);
+  isLoadingRelatedProducts$: Observable<boolean> = this.store.select(ProductDetailsFeature.selectIsLoadingRelatedProducts);
+  relatedProductsErrorMessage$: Observable<string> = this.store.select(ProductDetailsFeature.selectRelatedProductsErrorMessage);
 
   constructor(private store: Store, private route: ActivatedRoute) {}
 

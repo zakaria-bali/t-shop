@@ -35,7 +35,10 @@
       nzXl="12"
 
     >
-    <app-related-product-list>
+    <app-related-product-list
+      [products]="relatedProducts$ | async"
+      [isLoading]="(isLoadingRelatedProducts$ |async) ?? false"
+      [errorMessage]="(relatedProductsErrorMessage$ | async) ?? ''">
 
     </app-related-product-list>
     </div>

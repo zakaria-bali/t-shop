@@ -2,9 +2,26 @@
   <h1 class="mb-6">
     Related Products
   </h1>
-  <div *ngFor="let product of products; last as isLast" [ngClass]="{'mb-3': !isLast}">
-    <app-simple-product-card [product]="product"></app-simple-product-card>
-    <nz-divider *ngIf="!isLast"></nz-divider>
-  </div>
+  <ng-container *ngIf="products && !isLoading else skeleton">
+    <div *ngFor="let product of products; last as isLast" [ngClass]="{'mb-3': !isLast}" >
+      <app-simple-product-card [product]="product"></app-simple-product-card>
+      <nz-divider *ngIf="!isLast"></nz-divider>
+    </div>
+  </ng-container>
 </div>
+
+<ng-template #skeleton>
+  <ng-container *ngIf="isLoading else error">
+    <div *ngFor="let product of [].constructor().fill(1); last as isLast" [ngClass]="{'mb-3': !isLast}" >
+      <app-simple-product-card [product]="undefined"></app-simple-product-card>
+      <nz-divider *ngIf="!isLast"></nz-divider>
+  </div>
+  </ng-container>
+</ng-template>
+
+<ng-template #error>
+  <div class="flex justify-content-center align-items-center py-4">
+    <h1> {{ errorMessage }} </h1>
+  </div>
+</ng-template>
 
