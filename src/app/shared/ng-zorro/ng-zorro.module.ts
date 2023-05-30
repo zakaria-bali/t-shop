@@ -13,6 +13,7 @@ import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzBadgeModule } from 'ng-zorro-antd/badge';
 import { NzSkeletonModule } from 'ng-zorro-antd/skeleton';
 import { NzModalModule } from 'ng-zorro-antd/modal';
+import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 
 @NgModule({
   declarations: [],
@@ -30,7 +31,8 @@ import { NzModalModule } from 'ng-zorro-antd/modal';
     NzDividerModule,
     NzBadgeModule,
     NzSkeletonModule,
-    NzModalModule
+    NzModalModule,
+    NzBreadCrumbModule
   ],
   exports: [
     NzLayoutModule,
@@ -45,7 +47,8 @@ import { NzModalModule } from 'ng-zorro-antd/modal';
     NzDividerModule,
     NzBadgeModule,
     NzSkeletonModule,
-    NzModalModule
+    NzModalModule,
+    NzBreadCrumbModule
   ],
 })
 export class NgZorroModule {}
