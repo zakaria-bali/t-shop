@@ -1,27 +1,30 @@
-# TShop
+# T-Shop
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.1.
+Welcome to T-Shop! This project is a web application built with Angular.
 
-## Development server
+## Requirements
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+To run this project, ensure that you have Node.js installed on your machine. You can download Node.js from the official website: [Node.js](https://nodejs.org/)
 
-## Code scaffolding
+## Instructions
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. First, navigate to the project directory.
 
-## Build
+2. Run the mock API server by executing the following command in your terminal:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+`$ npm run start:server`
 
-## Running unit tests
+3. Once the mock API server is running, open another terminal window and start the Angular development server using the following command:
+`$ npm start`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+4. After running the above command, the T-Shop web application will be accessible in your browser at `http://localhost:4200`.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Demo
 
-## Further help
+![Desktop Demo](desktop-demo.gif)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+The above GIF demonstrates the desktop version of the T-Shop web application.
+
+Feel free to explore and enjoy shopping with T-Shop!
+
