@@ -19,7 +19,34 @@
 </div>
 
 <ng-template #skeleton>
-  <div>
-    loading...
+  <div class="flex justify-content-between">
+    <div class="flex justify-content-start align-items-center">
+      <nz-skeleton-element
+        nzType="avatar"
+        [nzActive]="true"
+
+      ></nz-skeleton-element>
+
+      <h2 class="ml-2">
+        <nz-skeleton-element
+          nzType="input"
+          [nzActive]="true"
+          nzSize="small"
+        ></nz-skeleton-element>
+      </h2>
+    </div>
+    <div class="flex justify-content-center align-items-center review-date">
+      <nz-skeleton-element
+          nzType="button"
+          [nzActive]="true"
+          nzSize="small"
+      ></nz-skeleton-element>
+    </div>
   </div>
+  <div class="rate">
+    <nz-rate [ngModel]="0" nzDisabled></nz-rate>
+  </div>
+  <p>
+    <nz-skeleton></nz-skeleton>
+  </p>
 </ng-template>

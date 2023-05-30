@@ -2,8 +2,26 @@
   <h1 class="mb-6">
     Reviews
   </h1>
-  <div  *ngFor="let review of reviews; last as isLast" [ngClass]="{'mb-3': !isLast}">
-    <app-review [review]="review"></app-review>
-    <nz-divider *ngIf="!isLast"></nz-divider>
-  </div>
+  <ng-container *ngIf="reviews && !isLoading else skeleton">
+    <div  *ngFor="let review of reviews; last as isLast" [ngClass]="{'mb-3': !isLast}">
+      <app-review [review]="review"></app-review>
+      <nz-divider *ngIf="!isLast"></nz-divider>
+    </div>
+  </ng-container>
 </div>
+
+<ng-template #skeleton>
+  <ng-container *ngIf="isLoading else error">
+    <div  *ngFor="let review of [].constructor(3).fill(1) last as isLast" [ngClass]="{'mb-3': !isLast}">
+      <app-review [review]="undefined"></app-review>
+      <nz-divider *ngIf="!isLast"></nz-divider>
+    </div>
+  </ng-container>
+</ng-template>
+
+<ng-template #error>
+  <div class="flex justify-content-center align-items-center py-4">
+    <h1> {{ errorMessage }} </h1>
+  </div>
+</ng-template>
+
