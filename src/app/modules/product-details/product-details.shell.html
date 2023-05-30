@@ -1,6 +1,14 @@
 <div class="m-0 p-0 md:px-4 lg:px-8 py-4">
   <div>
-    <app-product-details></app-product-details>
+    <app-product-details
+      [product]="(product$  | async)"
+      [isLoading]="(isLoadingProduct$ | async) ?? false"
+      [errorMessage]="(productErrorMessage$ | async) ?? ''"
+      [selectedProductsIds]="(selectedProductsIds$ |async) ?? []"
+      (addToCart)="onAddToCart($event)"
+      (removeFromCart)="onRemoveFromCart($event)"
+      (quantityChanged)="onQuantityChanged($event)"
+      ></app-product-details>
   </div>
   <div nz-row [nzGutter]="16">
     <div

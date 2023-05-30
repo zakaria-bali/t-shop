@@ -31,7 +31,12 @@ export const ShoppingCartFeature = createFeature({
         ...state,
         items: [ ...state.items.filter((item) => item.product.id !== action.id)]
       }
-
+    }),
+    on(ShoppingCartActions.updateProductQuantity, (state, action) => {
+      return {
+        ...state,
+        items: state.items.map((item) => item.product.id === action.quantityUpdate.id ? {  ...item, quantity: action.quantityUpdate.quantity   } : item )
+      }
     })
   )
 })

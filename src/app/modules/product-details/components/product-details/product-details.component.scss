@@ -38,3 +38,10 @@
   color: #000;
   background-color: #f2f2f4;
 }
+
+:host::ng-deep {
+  .ant-skeleton-image {
+    min-height: 500px;
+    min-width: 500px;
+  }
+}

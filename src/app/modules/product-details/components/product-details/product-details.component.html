@@ -1,4 +1,4 @@
-<div nz-row [nzGutter]="16" >
+<div nz-row [nzGutter]="16" *ngIf="product && !isLoading else skeleton">
   <div
       nz-col
       class="gutter-row p-0"
@@ -10,7 +10,7 @@
       class="p-5"
     >
     <div class="flex justify-content-center align-items-center p-8 img-container">
-      <img src="assets/images/lounge-chair.png" class="product-img m-6" alt="Lounge Chair" />
+      <img src="{{product.imageUrl}}" class="product-img m-6" alt="Lounge Chair" />
     </div>
   </div>
 
@@ -22,26 +22,30 @@
         nzLg="12"
         nzXl="12">
     <div class="flex justify-content-between">
-      <h1> Lounge Chair </h1>
-      <h1> {{ 89 | currency }} </h1>
+      <h1> {{ product.title }} </h1>
+      <h1> {{ product.price | currency }} </h1>
     </div>
     <div class="font-medium product-category">
-      Furniture
+      {{ product.category | titlecase }}
     </div>
-    <div class="product-description" [innerHTML]="productDescription">
+    <div class="product-description" [innerHTML]="product.description">
     </div>
 
     <div class="actions flex flex-row justify-content-center align-items-center">
       <div class="quantity mr-3">
-        <app-increment-decrement [(ngModel)]="quantity"></app-increment-decrement>
+        <app-increment-decrement [(ngModel)]="quantity" (valueChanged)="onQuantityChanged($event)"></app-increment-decrement>
       </div>
-      <button class="flex justify-content-center align-items-center cart-action flex-1">
+      <button
+        class="flex justify-content-center align-items-center cart-action flex-1"
+        *ngIf="!selectedProductsIds.includes(product.id)"
+        (click)="addToCartClicked()">
         <span class="material-symbols-outlined mr-1"> add_shopping_cart </span>
         Add To Cart
       </button>
       <button
         class="flex justify-content-center align-items-center cart-action"
-        *ngIf="false"
+        *ngIf="selectedProductsIds.includes(product.id)"
+        (click)="removeFromCartClicked()"
       >
         <span class="material-symbols-outlined"> remove_shopping_cart </span>
         Remove from Cart
@@ -51,3 +55,85 @@
   </div>
 
 </div>
+
+<ng-template #skeleton>
+  <div nz-row [nzGutter]="16" *ngIf=" isLoading  else error">
+    <div
+        nz-col
+        class="gutter-row p-0"
+        nzXs="24"
+        nzSm="22"
+        nzMd="12"
+        nzLg="12"
+        nzXl="12"
+        class="p-5"
+      >
+      <div class="flex justify-content-center align-items-center p-8 img-container">
+        <nz-skeleton-element
+          nzType="image"
+          [nzActive]="true"
+          style="min-width: 500px; min-height: 500px;"
+        ></nz-skeleton-element>
+      </div>
+    </div>
+
+    <div nz-col
+          class="gutter-row p-5"
+          nzXs="24"
+          nzSm="22"
+          nzMd="12"
+          nzLg="12"
+          nzXl="12">
+      <div class="flex justify-content-between">
+        <h1>
+          <nz-skeleton-element
+            nzType="input"
+            [nzActive]="true"
+          ></nz-skeleton-element>
+        </h1>
+        <h1>
+          <nz-skeleton-element
+            nzType="button"
+            [nzActive]="true"
+
+          ></nz-skeleton-element>
+        </h1>
+      </div>
+      <div class="font-medium product-category">
+        <nz-skeleton-element
+            nzType="button"
+            [nzActive]="true"
+            nzSize="small"
+
+        ></nz-skeleton-element>
+      </div>
+      <div class="product-description">
+        <nz-skeleton></nz-skeleton>
+        <nz-skeleton></nz-skeleton>
+        <nz-skeleton></nz-skeleton>
+      </div>
+
+      <div class="actions flex flex-row justify-content-center align-items-center">
+        <div class="quantity mr-3">
+          <nz-skeleton-element
+            nzType="button"
+            [nzActive]="true"
+          ></nz-skeleton-element>
+        </div>
+
+        <nz-skeleton-element
+            nzType="input"
+            [nzActive]="true"
+        ></nz-skeleton-element>
+
+      </div>
+    </div>
+
+  </div>
+</ng-template>
+
+<ng-template #error>
+  <div class="p-8 m-8 flex justify-content-center align-items-center">
+    <h1>{{ errorMessage }}</h1>
+  </div>
+</ng-template>

@@ -9,7 +9,10 @@ import { FormsModule } from '@angular/forms';
 import { ReviewComponent } from './components/review/review.component';
 import { ReviewsListComponent } from './components/reviews-list/reviews-list.component';
 import { RelatedProductListComponent } from './components/related-product-list/related-product-list.component';
-
+import { StoreModule } from '@ngrx/store';
+import { ProductDetailsFeature } from './state';
+import { EffectsModule } from '@ngrx/effects';
+import * as ProductDetailsEffect from './state/effects'
 
 @NgModule({
   declarations: [
@@ -23,7 +26,9 @@ import { RelatedProductListComponent } from './components/related-product-list/r
     CommonModule,
     ProductDetailsRoutingModule,
     SharedModule,
-    FormsModule
+    FormsModule,
+    StoreModule.forFeature(ProductDetailsFeature),
+    EffectsModule.forFeature([ProductDetailsEffect])
   ]
 })
 export class ProductDetailsModule { }
