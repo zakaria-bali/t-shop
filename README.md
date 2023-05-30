@@ -8,7 +8,8 @@ To run this project, ensure that you have Node.js installed on your machine. You
 
 ## Instructions
 
-1. First, navigate to the project directory.
+1. First, navigate to the project directory and Install the project dependencies by executing the following command in your terminal:
+`$ npm install`
 
 2. Run the mock API server by executing the following command in your terminal:
 
