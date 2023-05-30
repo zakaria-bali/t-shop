@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { CartItem } from '../models/cart.model';
-import { FormArray, FormControl, FormGroup } from '@angular/forms';
+import { AbstractControl, FormArray, FormControl, FormGroup } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
@@ -14,18 +14,19 @@ export class CartService {
   constructor() { }
 
 
-  calculateTotal(items: CartItem[]) {
+  calculateTotal() {
     let total = 0;
-
-    items.forEach((item: CartItem) => {
-      total += item.quantity * item.product.price;
-    })
+    if (this.items.controls) {
+      this.items.controls.forEach((item: AbstractControl) => {
+        total += item.value.quantity * item.value.product.price;
+      })
+    }
 
     return total;
   }
 
   itemsToFormArray(items: CartItem[]) {
-    this.items.setValue([]);
+    this.items.controls = [];
     items.forEach((item: CartItem) => {
       this.items.controls.push(
         new FormControl(item)
@@ -35,5 +36,10 @@ export class CartService {
 
   get items(): FormArray {
     return this.cartForm.get('items') as FormArray;
+  }
+
+  removeProductControl(id: number | string) {
+    const index = this.items.value.findIndex((item: CartItem) => item.product.id === id)
+    this.items.removeAt(index);
   }
 }

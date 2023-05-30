@@ -40,9 +40,9 @@
 
   </div>
   <form [formGroup]="cartService.cartForm" (submit)="onSubmit()">
-    <ng-container formArrayName="items">
+    <ng-container formArrayName="items" *ngIf="cartService.items.controls.length !== 0; else emptyCart">
       <div  *ngFor="let item of cartService.items.controls; index as i">
-        <app-cart-item [cartItem]="item.value" formControlName="{{i}}" >
+        <app-cart-item [cartItem]="item.value" formControlName="{{i}}" (removeFromCart)="onRemoveFromCart($event)" >
         </app-cart-item>
         <nz-divider></nz-divider>
       </div>
@@ -53,7 +53,10 @@
         <span> {{ total | currency }} </span>
       </div>
       <div class="flex justify-content-end py-2 px-6">
-        <button class="checkout flex justify-content-center align-items-center" type="submit">
+        <button
+          class="checkout flex justify-content-center align-items-center"
+          type="submit"
+          [disabled]="cartService.items.controls.length === 0">
           <span class="material-symbols-outlined mr-2">
             shopping_cart_checkout
           </span>
@@ -65,3 +68,11 @@
 
   </form>
 </div>
+
+<ng-template #emptyCart>
+  <nz-divider></nz-divider>
+  <div class="p-5 flex justify-content-center align-items-center">
+    <h2> the cart is empty  </h2>
+  </div>
+  <nz-divider></nz-divider>
+</ng-template>

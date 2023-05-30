@@ -16,7 +16,7 @@
         nzMd="6"
         nzLg="6"
         nzXl="6">
-        <app-increment-decrement [(ngModel)]="cartItem.quantity" (valueChanged)="onQuantityChanged($event)"></app-increment-decrement>
+        <app-increment-decrement [ngModel]="cartItem.quantity" (valueChanged)="onQuantityChanged($event)"></app-increment-decrement>
   </div>
   <div nz-col
         class="gutter-row p-0  flex align-items-center justify-content-center font-bold mb-3 md:mb-0"
@@ -34,7 +34,7 @@
         nzMd="2"
         nzLg="2"
         nzXl="2">
-      <button class="action">
+      <button class="action" (click)="removeItemClicked()" type="button">
         <span nz-icon nzType="delete" nzTheme="outline"></span>
       </button>
   </div>
