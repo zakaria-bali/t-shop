@@ -1,3 +1,6 @@
-<div>
-  <app-product-list [products]="(products$ | async)"></app-product-list>
+<div class="h-full w-full">
+  <app-product-list
+    [products]="(products$ | async)"
+    [isLoading]="(isLoading$ | async) ?? false"
+    [errorMessage]="(errorMessage$ | async) ?? ''"></app-product-list>
 </div>

@@ -9,4 +9,5 @@ import { Product } from 'src/app/core/models/product.model';
 export class ProductCardComponent {
   @Input()
   product: Product | undefined;
+
 }

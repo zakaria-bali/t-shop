@@ -1,4 +1,4 @@
-<div class="m-0 p-0 md:px-4 lg:px-8 py-4">
+<div class="h-full w-full m-0 p-0 md:px-4 lg:px-8 py-4">
   <div class="flex justify-content-end search-container">
     <nz-input-group [nzSuffix]="suffixIconSearch">
       <input
@@ -12,7 +12,7 @@
       <span nz-icon nzType="search"></span>
     </ng-template>
   </div>
-  <div nz-row [nzGutter]="16" *ngIf="products && !isLoading">
+  <div nz-row [nzGutter]="16" *ngIf="products && !isLoading else skeleton">
     <div
       nz-col
       class="gutter-row p-0"
@@ -28,3 +28,28 @@
     </div>
   </div>
 </div>
+
+<ng-template #skeleton>
+  <div nz-row [nzGutter]="16" *ngIf="isLoading else error">
+    <div
+      nz-col
+      class="gutter-row p-0"
+      nzXs="24"
+      nzSm="12"
+      nzMd="12"
+      nzLg="8"
+      nzXl="6"
+      *ngFor="let product of [].constructor(10).fill(1)"
+    >
+      <!-- <div class="inner-box">col-6</div> -->
+      <app-product-card [product]="undefined"></app-product-card>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #error>
+  <div class="h-full w-full flex justify-content-center align-items-center">
+    <h1> {{ errorMessage }} </h1>
+
+  </div>
+</ng-template>

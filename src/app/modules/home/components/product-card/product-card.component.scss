@@ -43,3 +43,11 @@
     text-decoration: solid underline rgba(0,0,0,.85) 2px;
   }
 }
+
+:host::ng-deep {
+  .product-description{
+    .ant-skeleton-element .ant-skeleton-input-sm {
+      width: 200px
+    }
+  }
+}
