@@ -5,7 +5,8 @@ import { ProductDetailsShell } from './product-details.shell';
 const routes: Routes = [
   {
     path: ':id',
-    component: ProductDetailsShell
+    component: ProductDetailsShell,
+    title: 'T-Shop | Product Details'
   }
 ];
 

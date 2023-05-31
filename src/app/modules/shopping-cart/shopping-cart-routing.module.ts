@@ -5,7 +5,8 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'shopping-cart',
-    component: ShoppingCartShell
+    component: ShoppingCartShell,
+    title: 'T-Shop | Shopping Cart'
   }
 ];
 
