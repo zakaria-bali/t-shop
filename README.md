@@ -27,5 +27,8 @@ To run this project, ensure that you have Node.js installed on your machine. You
 
 The above GIF demonstrates the desktop version of the T-Shop web application.
 
+![Mobile Demo](mobile-demo.gif)
+The above GIF demonstrates the mobile version of the T-Shop web application.
+
 Feel free to explore and enjoy shopping with T-Shop!
 
