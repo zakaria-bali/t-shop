@@ -50,4 +50,11 @@
       margin-left: 0px;
     }
   }
+}
+
+@media screen and (max-width: 510px) {
+  .product-img {
+    max-width: 180px !important;
+
   }
+}
