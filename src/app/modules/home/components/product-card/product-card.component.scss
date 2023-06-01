@@ -28,6 +28,8 @@
   font-weight: bold;
   visibility: hidden;
   cursor: pointer;
+  transition-delay: 0.2s;
+  opacity: 0;
 }
 
 .cart-action:hover {
@@ -38,6 +40,8 @@
 .card:hover {
   .cart-action {
     visibility: visible;
+    transition: visibility 0s linear 0.2s, opacity 0.6s linear;
+    opacity: 1;
   }
   .product-title {
     text-decoration: solid underline rgba(0,0,0,.85) 2px;
