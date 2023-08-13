@@ -38,7 +38,9 @@
               "src/styles.scss",
               "node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
               "node_modules/material-symbols/index.css",
-              "node_modules/primeflex/primeflex.css"
+              "node_modules/primeflex/primeflex.css",
+              "node_modules/shepherd.js/dist/css/shepherd.css",
+              "src/assets/css/shepherd-custom.css"
             ],
             "scripts": []
           },

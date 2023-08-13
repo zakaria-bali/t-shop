@@ -7,9 +7,10 @@ import { IncrementDecrementComponent } from './components/increment-decrement/in
 import { FormsModule } from '@angular/forms';
 import { SimpleProductCardComponent } from './components/simple-product-card/simple-product-card.component';
 import { RouterModule } from '@angular/router';
+import { ShepherdComponent } from './components/shepherd/shepherd.component';
 
 @NgModule({
-  declarations: [ToolbarComponent, FooterComponent, IncrementDecrementComponent, SimpleProductCardComponent],
+  declarations: [ToolbarComponent, FooterComponent, IncrementDecrementComponent, SimpleProductCardComponent, ShepherdComponent],
   imports: [CommonModule, NgZorroModule, FormsModule, RouterModule],
   exports: [CommonModule, NgZorroModule, ToolbarComponent, FooterComponent, IncrementDecrementComponent, SimpleProductCardComponent],
 })

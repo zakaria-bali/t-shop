@@ -1,0 +1,28 @@
+.shepherd-title {
+  font-weight: bold !important;
+  font-size: large;
+}
+
+.shepherd-has-title .shepherd-content .shepherd-header {
+  background: #f2f2f4 !important;
+}
+
+.shepherd-arrow:before {
+  background: #f2f2f4 !important;
+}
+
+.shepherd-button {
+  border-radius: 10px !important;
+  background: #000 !important;
+  color: #fff !important;
+}
+
+.shepherd-text {
+  padding: 30px 20px !important;
+}
+
+.action-btn {
+  font-weight: bold;
+}
+
+
